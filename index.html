@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlantis SCE</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    /* Custom Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    nav {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    section {
+      padding: 60px 0;
+    }
+    #home {
+      background: linear-gradient(to right, #007bff, #00aaff);
+      color: white;
+      height: 100vh;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #video-section {
+        background: #f8f9fa;
+        padding: 50px 0;
+        text-align: center;
+      }
+      
+      .video-container {
+        position: relative;
+        max-width: 800px; /* Largeur maximale définie */
+        aspect-ratio: 16 / 9; /* Maintient un format paysage (16:9) */
+        overflow: hidden; /* Cache l'excédent si la vidéo dépasse */
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+      
+      .video-responsive {
+        width: 100%; /* La vidéo s'étend sur toute la largeur du conteneur */
+        height: 100%; /* S'ajuste à la hauteur du conteneur */
+        object-fit: cover; /* Recadre la vidéo pour remplir le conteneur */
+      }
+      
+    .btn-primary, .btn-success {
+      border: none;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    .btn-primary:hover, .btn-success:hover {
+      transform: scale(1.1);
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#">Atlantis SCE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#video-section">Vidéo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">À Propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="container">
+      <h1 class="animate__animated animate__fadeInDown">Bienvenue à Atlantis SCE</h1>
+      <p class="lead mt-3 animate__animated animate__fadeInUp">Votre partenaire pour une piscine parfaite : entretien, plomberie, et électricité.</p>
+      <a href="#video-section" class="btn btn-primary mt-4 animate__animated animate__pulse animate__infinite">Voir la Vidéo</a>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video-section">
+    <div class="container">
+      <h2 class="mb-4">Découvrez Notre Expertise</h2>
+      <p>Atlantis SCE s'engage à offrir des services de qualité pour garantir la durabilité et la performance de vos piscines.</p>
+      <div class="video-container">
+        <video autoplay unmuted loop class="video-responsive">
+          <source src="assets/video/intro.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la lecture vidéo.
+        </video>
+      </div>
+    </div>
+  </section>
+  
+  <section id="brochure-section">
+    <div class="container text-center">
+      <h2 class="mb-4">Téléchargez Notre Brochure</h2>
+      <p>
+        Découvrez tous les détails sur nos services, y compris nos offres personnalisées pour l'entretien de piscines, la plomberie et l'électricité.
+        Consultez notre brochure complète pour en savoir plus !
+      </p>
+      <a href="assets/brochure.pdf" class="btn btn-primary btn-lg mt-3" download>
+        <i class="fas fa-file-download"></i> Télécharger la Brochure
+      </a>
+    </div>
+  </section>
+  
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container text-center">
+      <h2 class="mb-4">À Propos de Nous</h2>
+      <p>
+        Chez Atlantis SCE, nous assurons un entretien professionnel et complet de vos piscines. Nos techniciens qualifiés diagnostiquent et préviennent les pannes, garantissant une piscine prête à l’usage à tout moment.
+      </p>
+      <img src="assets/images/planning-entretien-piscine.jpg" alt="À Propos" class="img-fluid rounded mt-3">
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2 class="mb-4">Nos Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assets/images/Entretien-piscine-1.jpg" class="card-img-top" alt="Entretien Piscine">
+            <div class="card-body">
+              <h5 class="card-title">Entretien Piscine</h5>
+              <p class="card-text">Maintenance complète : nettoyage, calibration chimique, vérification des équipements.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assets/images/28085.jpg" class="card-img-top" alt="Plomberie Piscine">
+            <div class="card-body">
+              <h5 class="card-title">Plomberie Piscine</h5>
+              <p class="card-text">Installation et maintenance des systèmes hydrauliques pour un fonctionnement optimal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assets/images/eclairage-piscine.jpg" class="card-img-top" alt="Électricité Piscine">
+            <div class="card-body">
+              <h5 class="card-title">Électricité Piscine</h5>
+              <p class="card-text">Installation sécurisée et maintenance des systèmes électriques.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container text-center">
+      <h2 class="mb-4">Contactez-Nous</h2>
+      <p><strong>Adresse:</strong> N332, Bd Brahim Roudani, Résidence Rayhane, Casablanca</p>
+      <p><strong>Téléphone:</strong> +212 6 63 11 31 43</p>
+      <p><strong>Email:</strong> <a href="mailto:Atlantis.sce@gmail.com">Atlantis.sce@gmail.com</a></p>
+      <a href="https://wa.me/212663113143" class="btn btn-success">WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2024 Atlantis SCE. Tous droits réservés.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
